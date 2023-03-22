@@ -21,6 +21,9 @@
 		3E486A6629CB8E3B00A06F83 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */; };
 		3E486A6829CB8E4E00A06F83 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6729CB8E4E00A06F83 /* HomeView.swift */; };
 		3E486A6C29CB927E00A06F83 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6B29CB927E00A06F83 /* UserRow.swift */; };
+		3E486A7029CB98C700A06F83 /* UserReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6F29CB98C700A06F83 /* UserReposView.swift */; };
+		3E486A7229CB9B0C00A06F83 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A7129CB9B0C00A06F83 /* Repo.swift */; };
+		3E486A7829CB9FB800A06F83 /* RepoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A7729CB9FB800A06F83 /* RepoRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		3E486A6729CB8E4E00A06F83 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3E486A6B29CB927E00A06F83 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
+		3E486A6F29CB98C700A06F83 /* UserReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReposView.swift; sourceTree = "<group>"; };
+		3E486A7129CB9B0C00A06F83 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		3E486A7729CB9FB800A06F83 /* RepoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +110,10 @@
 		3E486A5429CAD52E00A06F83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3E486A7429CB9F6C00A06F83 /* ReposGroup */,
+				3E486A7329CB9F4C00A06F83 /* HomeGroup */,
 				3E486A4229CAD08400A06F83 /* ContentView.swift */,
 				3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */,
-				3E486A6729CB8E4E00A06F83 /* HomeView.swift */,
-				3E486A6B29CB927E00A06F83 /* UserRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3E486A6129CB895A00A06F83 /* GithubUser.swift */,
+				3E486A7129CB9B0C00A06F83 /* Repo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +150,24 @@
 				3E486A5B29CB87B600A06F83 /* FetchError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		3E486A7329CB9F4C00A06F83 /* HomeGroup */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A6B29CB927E00A06F83 /* UserRow.swift */,
+				3E486A6729CB8E4E00A06F83 /* HomeView.swift */,
+			);
+			path = HomeGroup;
+			sourceTree = "<group>";
+		};
+		3E486A7429CB9F6C00A06F83 /* ReposGroup */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A6F29CB98C700A06F83 /* UserReposView.swift */,
+				3E486A7729CB9FB800A06F83 /* RepoRow.swift */,
+			);
+			path = ReposGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,11 +243,14 @@
 				3E486A6629CB8E3B00A06F83 /* FavoritesView.swift in Sources */,
 				3E486A4A29CAD08500A06F83 /* Persistence.swift in Sources */,
 				3E486A4D29CAD08500A06F83 /* GithubUsers.xcdatamodeld in Sources */,
+				3E486A7029CB98C700A06F83 /* UserReposView.swift in Sources */,
 				3E486A6C29CB927E00A06F83 /* UserRow.swift in Sources */,
 				3E486A5929CB876A00A06F83 /* NetworkProtocol.swift in Sources */,
 				3E486A5C29CB87B600A06F83 /* FetchError.swift in Sources */,
+				3E486A7229CB9B0C00A06F83 /* Repo.swift in Sources */,
 				3E486A6829CB8E4E00A06F83 /* HomeView.swift in Sources */,
 				3E486A6229CB895A00A06F83 /* GithubUser.swift in Sources */,
+				3E486A7829CB9FB800A06F83 /* RepoRow.swift in Sources */,
 				3E486A4329CAD08400A06F83 /* ContentView.swift in Sources */,
 				3E486A5E29CB87DA00A06F83 /* Network.swift in Sources */,
 				3E486A6029CB887700A06F83 /* GithubUsersViewModel.swift in Sources */,

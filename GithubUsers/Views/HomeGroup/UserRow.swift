@@ -10,6 +10,7 @@ import SwiftUI
 struct UserRow: View {
     let user:GithubUser
     let isFavorite:Bool
+    let closure:() -> Void
     var body: some View {
         HStack{
             AsyncImage(url: URL(string: user.avatarUrl)) { image in
@@ -27,12 +28,18 @@ struct UserRow: View {
             }
             Text(user.login)
                 .font(.system(size: 32,weight: .semibold))
+                .foregroundColor(.black)
             Spacer()
-            Image(systemName: isFavorite ? "trash" : "heart")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width:40,height: 40)
-                .foregroundColor(isFavorite ? .red : .orange)
+            Button {
+                closure()
+            } label: {
+                Image(systemName: isFavorite ? "trash" : "heart")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:40,height: 40)
+                    .foregroundColor(isFavorite ? .red : .orange)
+            }
+
         }
         .padding(.horizontal,20)
     }
@@ -40,6 +47,6 @@ struct UserRow: View {
 
 struct UserRow_Previews: PreviewProvider {
     static var previews: some View {
-        UserRow(user: GithubUser(login: "mojombo", avatarUrl: "https://avatars.githubusercontent.com/u/1?v=4"), isFavorite: false)
+        UserRow(user: GithubUser(login: "mojombo", avatarUrl: "https://avatars.githubusercontent.com/u/1?v=4"), isFavorite: false, closure: {})
     }
 }
