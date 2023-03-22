@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserReposView: View {
-    let user:GithubUser
+    let userName:String
     @EnvironmentObject var githubUsersVM:GithubUsersViewModel
     @State private var repos:[Repo] = []
     
@@ -28,9 +28,9 @@ struct UserReposView: View {
             }
         }
         .onAppear(perform: {
-            githubUsersVM.fetchRepos(userName: user.login)
+            githubUsersVM.fetchRepos(userName: userName)
         })
-        .navigationTitle(user.login)
+        .navigationTitle(userName)
         .navigationBarTitleDisplayMode(.inline)
     }
     
@@ -48,7 +48,7 @@ struct UserReposView: View {
 
 struct UserReposView_Previews: PreviewProvider {
     static var previews: some View {
-        UserReposView(user: GithubUser(login: "mojombo", avatarUrl: "https://avatars.githubusercontent.com/u/1?v=4"))
+        UserReposView(userName: "mojombo")
             .environmentObject(GithubUsersViewModel())
     }
 }

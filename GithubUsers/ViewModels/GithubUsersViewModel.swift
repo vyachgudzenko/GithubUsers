@@ -11,7 +11,6 @@ import Combine
 class GithubUsersViewModel:CombineNetwork,ObservableObject{
     @Published var users:[GithubUser] = []
     @Published var repos:[Repo] = []
-    @Published var currentUser:GithubUser? = nil
     private var anyCancellables = Set<AnyCancellable>()
     
     let usersUrl:String = "https://api.github.com/users"

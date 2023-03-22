@@ -9,27 +9,22 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    @StateObject var githubUsersVM = GithubUsersViewModel()
     
     @State var selectionTab:Int = 1
     var body: some View {
         
-        TabView(selection: $selectionTab) {
+        TabView{
             HomeView()
                 .tabItem {
                     getTabItem(title: "Home", image: "house")
                 }
-                .tag(1)
+                .environmentObject(githubUsersVM)
             FavoritesView()
                 .tabItem {
                     getTabItem(title: "Favorites", image: "heart")
                 }
-                .tag(1)
+                .environmentObject(githubUsersVM)
         }
         
     }
@@ -45,6 +40,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+            
     }
 }

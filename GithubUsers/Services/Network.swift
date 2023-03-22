@@ -17,7 +17,7 @@ class CombineNetwork:NetworkCombineProtocol{
         typeOfData: T.Type) -> AnyPublisher<T,FetchError> {
         guard let url = URL(string: urlString) else {
             return Fail(error: FetchError.badURL).eraseToAnyPublisher() }
-        var urlRequest = URLRequest(url: url)
+        let urlRequest = URLRequest(url: url)
             return URLSession.shared.dataTaskPublisher(for: urlRequest)
                 .tryMap { (data, response) -> Data in
                     if let httpResponse = response as? HTTPURLResponse{

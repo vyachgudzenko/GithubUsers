@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct UserRow: View {
-    let user:GithubUser
+    let login:String
+    let avatarUrl:String
     let isFavorite:Bool
     let closure:() -> Void
     var body: some View {
         HStack{
-            AsyncImage(url: URL(string: user.avatarUrl)) { image in
+            AsyncImage(url: URL(string: avatarUrl)) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -26,7 +27,7 @@ struct UserRow: View {
                     .frame(width:64,height: 64)
                     .clipShape(Circle())
             }
-            Text(user.login)
+            Text(login)
                 .font(.system(size: 32,weight: .semibold))
                 .foregroundColor(.black)
             Spacer()
@@ -47,6 +48,6 @@ struct UserRow: View {
 
 struct UserRow_Previews: PreviewProvider {
     static var previews: some View {
-        UserRow(user: GithubUser(login: "mojombo", avatarUrl: "https://avatars.githubusercontent.com/u/1?v=4"), isFavorite: false, closure: {})
+        UserRow(login: "mojombo" ,avatarUrl: "https://avatars.githubusercontent.com/u/1?v=4", isFavorite: false, closure: {})
     }
 }

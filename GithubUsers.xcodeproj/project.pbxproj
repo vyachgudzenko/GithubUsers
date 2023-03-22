@@ -111,9 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				3E486A7429CB9F6C00A06F83 /* ReposGroup */,
-				3E486A7329CB9F4C00A06F83 /* HomeGroup */,
+				3E486A7329CB9F4C00A06F83 /* UserGroup */,
 				3E486A4229CAD08400A06F83 /* ContentView.swift */,
-				3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,13 +151,14 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		3E486A7329CB9F4C00A06F83 /* HomeGroup */ = {
+		3E486A7329CB9F4C00A06F83 /* UserGroup */ = {
 			isa = PBXGroup;
 			children = (
+				3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */,
 				3E486A6B29CB927E00A06F83 /* UserRow.swift */,
 				3E486A6729CB8E4E00A06F83 /* HomeView.swift */,
 			);
-			path = HomeGroup;
+			path = UserGroup;
 			sourceTree = "<group>";
 		};
 		3E486A7429CB9F6C00A06F83 /* ReposGroup */ = {
