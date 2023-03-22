@@ -13,6 +13,14 @@
 		3E486A4829CAD08500A06F83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E486A4729CAD08500A06F83 /* Preview Assets.xcassets */; };
 		3E486A4A29CAD08500A06F83 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A4929CAD08500A06F83 /* Persistence.swift */; };
 		3E486A4D29CAD08500A06F83 /* GithubUsers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A4B29CAD08500A06F83 /* GithubUsers.xcdatamodeld */; };
+		3E486A5929CB876A00A06F83 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A5829CB876A00A06F83 /* NetworkProtocol.swift */; };
+		3E486A5C29CB87B600A06F83 /* FetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A5B29CB87B600A06F83 /* FetchError.swift */; };
+		3E486A5E29CB87DA00A06F83 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A5D29CB87DA00A06F83 /* Network.swift */; };
+		3E486A6029CB887700A06F83 /* GithubUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A5F29CB887700A06F83 /* GithubUsersViewModel.swift */; };
+		3E486A6229CB895A00A06F83 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6129CB895A00A06F83 /* GithubUser.swift */; };
+		3E486A6629CB8E3B00A06F83 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */; };
+		3E486A6829CB8E4E00A06F83 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6729CB8E4E00A06F83 /* HomeView.swift */; };
+		3E486A6C29CB927E00A06F83 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E486A6B29CB927E00A06F83 /* UserRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +31,14 @@
 		3E486A4729CAD08500A06F83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3E486A4929CAD08500A06F83 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3E486A4C29CAD08500A06F83 /* GithubUsers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GithubUsers.xcdatamodel; sourceTree = "<group>"; };
+		3E486A5829CB876A00A06F83 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		3E486A5B29CB87B600A06F83 /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
+		3E486A5D29CB87DA00A06F83 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		3E486A5F29CB887700A06F83 /* GithubUsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUsersViewModel.swift; sourceTree = "<group>"; };
+		3E486A6129CB895A00A06F83 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		3E486A6729CB8E4E00A06F83 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3E486A6B29CB927E00A06F83 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +71,14 @@
 		3E486A3F29CAD08400A06F83 /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				3E486A5A29CB878E00A06F83 /* Errors */,
+				3E486A5729CAD54800A06F83 /* Protocols */,
+				3E486A5629CAD53F00A06F83 /* Services */,
+				3E486A5529CAD53500A06F83 /* Models */,
+				3E486A5429CAD52E00A06F83 /* Views */,
+				3E486A5329CAD52300A06F83 /* ViewModels */,
 				3E486A4029CAD08400A06F83 /* GithubUsersApp.swift */,
-				3E486A4229CAD08400A06F83 /* ContentView.swift */,
 				3E486A4429CAD08500A06F83 /* Assets.xcassets */,
-				3E486A4929CAD08500A06F83 /* Persistence.swift */,
 				3E486A4B29CAD08500A06F83 /* GithubUsers.xcdatamodeld */,
 				3E486A4629CAD08500A06F83 /* Preview Content */,
 			);
@@ -71,6 +91,58 @@
 				3E486A4729CAD08500A06F83 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E486A5329CAD52300A06F83 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A5F29CB887700A06F83 /* GithubUsersViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3E486A5429CAD52E00A06F83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A4229CAD08400A06F83 /* ContentView.swift */,
+				3E486A6529CB8E3B00A06F83 /* FavoritesView.swift */,
+				3E486A6729CB8E4E00A06F83 /* HomeView.swift */,
+				3E486A6B29CB927E00A06F83 /* UserRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E486A5529CAD53500A06F83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A6129CB895A00A06F83 /* GithubUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3E486A5629CAD53F00A06F83 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A4929CAD08500A06F83 /* Persistence.swift */,
+				3E486A5D29CB87DA00A06F83 /* Network.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3E486A5729CAD54800A06F83 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A5829CB876A00A06F83 /* NetworkProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3E486A5A29CB878E00A06F83 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				3E486A5B29CB87B600A06F83 /* FetchError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +215,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E486A6629CB8E3B00A06F83 /* FavoritesView.swift in Sources */,
 				3E486A4A29CAD08500A06F83 /* Persistence.swift in Sources */,
 				3E486A4D29CAD08500A06F83 /* GithubUsers.xcdatamodeld in Sources */,
+				3E486A6C29CB927E00A06F83 /* UserRow.swift in Sources */,
+				3E486A5929CB876A00A06F83 /* NetworkProtocol.swift in Sources */,
+				3E486A5C29CB87B600A06F83 /* FetchError.swift in Sources */,
+				3E486A6829CB8E4E00A06F83 /* HomeView.swift in Sources */,
+				3E486A6229CB895A00A06F83 /* GithubUser.swift in Sources */,
 				3E486A4329CAD08400A06F83 /* ContentView.swift in Sources */,
+				3E486A5E29CB87DA00A06F83 /* Network.swift in Sources */,
+				3E486A6029CB887700A06F83 /* GithubUsersViewModel.swift in Sources */,
 				3E486A4129CAD08400A06F83 /* GithubUsersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
